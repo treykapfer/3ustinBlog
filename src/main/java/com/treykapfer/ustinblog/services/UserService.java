@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
-import com.treykapfer.beltexam.models.User;
-import com.treykapfer.beltexam.repositories.UserRepository;
+import com.treykapfer.ustinblog.models.User;
+import com.treykapfer.ustinblog.repositories.UserRepository;
 
 @Service
 public class UserService {

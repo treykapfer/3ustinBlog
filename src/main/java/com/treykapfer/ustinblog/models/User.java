@@ -23,9 +23,6 @@ import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.Transient;
 
-//error found not calling on idea
-import com.treykapfer.beltexam.models.Idea;
-
 @Entity
 @Table(name="users")
 public class User {
@@ -54,20 +51,19 @@ public class User {
     private Date createdAt;
     private Date updatedAt;
     
-    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
-    private List<Idea> ideas;
+	//inser table relationships here
+
+	//one user to many posts
+	//one user to many comments
+
+	//create three more models
+	//>>>likes (many to many users, many to one post, many to one comment)
+	//>>>posts (one to many comments, many to one user, one to many likes)
+	//>>>comments (many to one user, many to one post, one to many likes)
     
     //constructors
     public User() {
     }
-    
-    public List<Idea> getIdeas() {
-		return ideas;
-	}
-
-	public void setIdeas(List<Idea> ideas) {
-		this.ideas = ideas;
-	}
 
 	//getters/setters
     public Long getId() {

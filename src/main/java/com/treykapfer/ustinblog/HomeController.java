@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.treykapfer.ustinblog.*;
 import com.treykapfer.ustinblog.models.User;
 import com.treykapfer.ustinblog.services.UserService;
 import com.treykapfer.ustinblog.validations.UserValidator;
@@ -75,18 +74,4 @@ public class HomeController {
     	session.invalidate();
     	return "redirect:/";
     }
-	
-	//******************
-	//IDEA UPDATING, ADDING, AND DELETING METHODS
-	
-	@PostMapping("/ideas/add")
-	public String createIdea(@Valid @ModelAttribute("newIdea") Idea newIdea, BindingResult result, Model model, HttpSession session) {
-		if (result.hasErrors()) {
-			System.out.println(result);
-			return "newidea.jsp";
-		}
-		ideaServ.createIdea(newIdea);
-		return "redirect:/ideas";
-	}
-	
 }
