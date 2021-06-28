@@ -1,4 +1,4 @@
-package com.treykapfer.ustinblog;
+package com.treykapfer.ustinblog.controllers;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
