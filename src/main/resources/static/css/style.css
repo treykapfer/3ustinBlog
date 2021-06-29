@@ -13,9 +13,23 @@
     --globalPad: 1rem;
 }
 
+/*IMPORTED FONTS*/
+/*
+font-family: 'Alegreya Sans SC', sans-serif;
+font-family: 'Audiowide', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Bowlby One SC', cursive;
+font-family: 'Bungee', cursive;
+font-family: 'Dela Gothic One', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
+
 /*SET DEFAULTS*/
 body {
     background-color: var(--defaultColor);
+    font-family: 'Roboto', sans-serif;
 }
 
 /*COMBINED PROPS*/
@@ -25,18 +39,18 @@ body {
         flex-direction: column;
     }
 
-    /* flex row */
-    main, footer {
+/* flex row */
+    main, footer, nav {
         display: flex;
         flex-direction: row;
     }
 
-    /*secondary bg color*/
+/*secondary bg color*/
     header, footer {
         background-color: var(--secondaryColor);
     }
 
-    /*global pading*/
+/*global pading*/
     header, main, footer {
         padding: var(--globalPad);
     }
@@ -46,27 +60,46 @@ body {
     margin: 0px auto;
 
     max-width: 1080px;
+    min-width: 440px;
     background-color: var(--background);
 }
 
 /*CHILDREN OF CONTAINER*/
 /*HEADER*/
-/*MAIN*/
-    .right_container {
-        flex: 1;
+    nav {
+        justify-content: flex-end;
     }
+
+/*MAIN*/
 
     .left_container {
         flex: 2;
+        margin-left: 3rem;
+        margin-right: var(--globalMar);
+    }
+
+        .left_container h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 400%;
+        }
+
+        .btn {
+            width: 75%;
+        }
+
+    .right_container {
+        flex: 1;
+        margin-left: var(--globalMar);
+        margin-right: 3rem;
     }
 
 /*FOOTER*/
 footer {
     justify-content: space-between;
-    overflow: auto;
 }
 
     .blog_card {
+        background-color: var(--background);
         width: 270px;
         height: 270px;
     }
