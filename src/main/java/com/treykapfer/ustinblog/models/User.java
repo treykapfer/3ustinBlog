@@ -50,27 +50,44 @@ public class User {
     @Column(updatable=false)
     private Date createdAt;
     private Date updatedAt;
-    
-	//inser table relationships here
 
-	//one user to many posts
-	//one user to many comments
+    //relationships
+	@OneToMany(mappedBy="user", fetch = FetchType.LAZY)
+    private List<Post> posts;
 
-	//create three more models
+	@OneToMany(mappedBy="user", fetch = FetchType.LAZY)
+    private List<Comment> comments;
+
 	//>>>likes (many to many users, many to one post, many to one comment)
-	//>>>posts (one to many comments, many to one user, one to many likes)
-	//>>>comments (many to one user, many to one post, one to many likes)
     
     //constructors
     public User() {
     }
 
 	//getters/setters
-    public Long getId() {
-  		return id;
-  	}
+	//for relationships
+	public List<Post> getPosts() {
+		return posts;
+	}
 
-  	public String getUsername() {
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+
+	public List<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(List<Comment> comments) {
+		this.comments = comments;
+	}
+
+	//for self
+    public Long getId() {
+		return id;
+	}
+
+	public String getUsername() {
 		return username;
 	}
 
@@ -79,48 +96,48 @@ public class User {
 	}
 
 	public void setId(Long id) {
-  		this.id = id;
-  	}
+		this.id = id;
+	}
 
-  	public String getEmail() {
-  		return email;
-  	}
+	public String getEmail() {
+		return email;
+	}
 
-  	public void setEmail(String email) {
-  		this.email = email;
-  	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-  	public String getPassword() {
-  		return password;
-  	}
+	public String getPassword() {
+		return password;
+	}
 
-  	public void setPassword(String password) {
-  		this.password = password;
-  	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-  	public String getPasswordConfirmation() {
-  		return passwordConfirmation;
-  	}
+	public String getPasswordConfirmation() {
+		return passwordConfirmation;
+	}
 
-  	public void setPasswordConfirmation(String passwordConfirmation) {
-  		this.passwordConfirmation = passwordConfirmation;
-  	}
+	public void setPasswordConfirmation(String passwordConfirmation) {
+		this.passwordConfirmation = passwordConfirmation;
+	}
 
-  	public Date getCreatedAt() {
-  		return createdAt;
-  	}
+	public Date getCreatedAt() {
+		return createdAt;
+	}
 
-  	public void setCreatedAt(Date createdAt) {
-  		this.createdAt = createdAt;
-  	}
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
 
-  	public Date getUpdatedAt() {
-  		return updatedAt;
-  	}
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
 
-  	public void setUpdatedAt(Date updatedAt) {
-  		this.updatedAt = updatedAt;
-  	}
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
     
     //add extra
     @PrePersist
