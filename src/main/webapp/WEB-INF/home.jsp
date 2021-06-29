@@ -24,6 +24,7 @@
 			</nav>
 		</header>
 		<main>
+			
 		</main>	
 		<footer>
 			<small class="text-warning text-right">${userID}</small>

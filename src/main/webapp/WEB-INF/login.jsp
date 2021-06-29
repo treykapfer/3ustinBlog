@@ -18,7 +18,7 @@
 	<div class="container">
         <header>
             <nav>
-                <a href="/">Meet the Devs</a>
+                <a href="/about">Meet the Devs</a>
             </nav>
         </header>
         <main>

@@ -52,7 +52,7 @@ public class HomeController {
 			User u = userServ.registerUser(newUser);
 			session.setAttribute("sesUser", u);
 			session.setAttribute("userID", u.getId());
-			return "redirect:/ideas";
+			return "redirect:/";
 		}
 	}
 	
@@ -63,7 +63,7 @@ public class HomeController {
     		User sesUser = userServ.findByEmail(email);
     		session.setAttribute("sesUser", sesUser);
     		session.setAttribute("userID", sesUser.getId());
-    		return "redirect:/ideas";
+    		return "redirect:/home";
     	}
     	redirectAttributes.addFlashAttribute("error", "Invalid credientials. Please try again.");
 	    return "redirect:/";
@@ -73,5 +73,16 @@ public class HomeController {
     public String logout(HttpSession session) {
     	session.invalidate();
     	return "redirect:/";
-    }
+	}
+	
+	@RequestMapping("/about")
+    public String about() {
+    	return "about.jsp";
+	}
+
+	@RequestMapping("/home")
+    public String home() {
+    	return "home.jsp";
+	}
+
 }
