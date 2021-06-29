@@ -1,4 +1,72 @@
-* {
-    margin: 0px;
-    padding: 0px;
+/* GLOBAL VARIABLES */
+
+:root {
+    /*color scheme*/
+    --defaultColor: black;
+    --background: white;
+    --secondaryColor: grey;
+    --whiteSmoke: rgba(255, 255, 255, 0.74);
+    /* sizes */
+    --roundEdge: 10px;
+    --rounderEdge: 25px;
+    --globalMar: 1rem;
+    --globalPad: 1rem;
 }
+
+/*SET DEFAULTS*/
+body {
+    background-color: var(--defaultColor);
+}
+
+/*COMBINED PROPS*/
+/* flex column */
+    .container, .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* flex row */
+    main, footer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /*secondary bg color*/
+    header, footer {
+        background-color: var(--secondaryColor);
+    }
+
+    /*global pading*/
+    header, main, footer {
+        padding: var(--globalPad);
+    }
+
+/*CONTAINER*/
+.container {
+    margin: 0px auto;
+
+    max-width: 1080px;
+    background-color: var(--background);
+}
+
+/*CHILDREN OF CONTAINER*/
+/*HEADER*/
+/*MAIN*/
+    .right_container {
+        flex: 1;
+    }
+
+    .left_container {
+        flex: 2;
+    }
+
+/*FOOTER*/
+footer {
+    justify-content: space-between;
+    overflow: auto;
+}
+
+    .blog_card {
+        width: 270px;
+        height: 270px;
+    }
