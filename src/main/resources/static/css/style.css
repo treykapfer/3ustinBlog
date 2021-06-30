@@ -39,22 +39,22 @@ body {
 }
 
 a:link {
-    color: var(--defaultColor);
+    color: var(--tertiaryColor);
     text-decoration: none;
 }
 
 a:active {
-    color: var(--defaultColor);
+    color: var(--tertiaryColor);
     text-decoration: none;
 }
 
 a:visited {
-    color: var(--defaultColor);
+    color: var(--tertiaryColor);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--defaultColor);
+    color: var(--tertiaryColor);
     text-decoration: none;
 }
 
@@ -77,9 +77,14 @@ a:hover {
         background-image: url(../img/rough_texture_trans_15.png);
     }
 
-/*global pading*/
+/*global padding*/
     header, main, footer, .post_row {
         padding: var(--globalPad);
+    }
+
+/*tiny edge*/
+    .post_img {
+        border-radius: var(--tinyEdge);
     }
 
 /*CONTAINER*/
@@ -97,9 +102,19 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+    header h1 {
+        color: var(--tertiaryColor);
+        font-family: var(--impactFont);
+        margin-left: 1.5rem;
+    }
 
     nav {
         justify-content: flex-end;
+        font-family: var(--impactFont);
+    }
+
+    nav a {
+        margin: 0 var(--globalMar);
     }
 
 /*MAIN COMPONENTS*/
