@@ -105,12 +105,17 @@ public class HomeController {
 	}
 
 	@RequestMapping(value="/post/{id}/newComment", method=RequestMethod.POST)
-	public String postNewComment(@Valid @ModelAttribute("comment") Comment comment, BindingResult result, @PathVariable("id") Long id, Model model){
-		
-		System.out.println(comment.getContent());
+	public String postNewComment(@Valid @ModelAttribute("comment") Comment comment, BindingResult result, @PathVariable("id") Long id, Model model, HttpSession session){
+		//Grabbing Post, User, and Comment Content for a new Comment.
 		Post post = postService.findOneByID(id);
-		//comment.setPost(post);
-		commentService.createComment(comment);
+		User user = userServ.findUserById(Long.valueOf(session.getAttribute("userID").toString()));
+		Comment newComment= new Comment();
+		//Storing all the values into a new comment.
+		newComment.setContent(comment.getContent());
+		newComment.setPost(post);
+		newComment.setUser(user);
+		//Creating a new comment.
+		commentService.createComment(newComment);
 		return "redirect:/post/" + id;
 		
 	}
