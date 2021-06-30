@@ -30,14 +30,8 @@ public class Comment {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     
-    @NotEmpty(message="Title field cannot be empty")
-    private String title;
-    
     @NotEmpty(message="Content field cannot be empty")
     private String content;
-
-    @NotEmpty(message="Image URL field cannot be empty")
-    private String imageURL;
     
     @Column(updatable=false)
     private Date createdAt;
@@ -85,28 +79,12 @@ public class Comment {
         this.id = id;
     }
 
-    public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
     public String getContent() {
 		return content;
 	}
 
 	public void setContent(String content) {
 		this.content = content;
-	}
-
-    public String getImageURL() {
-		return imageURL;
-	}
-
-	public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
 	}
 
     public Date getCreatedAt() {
