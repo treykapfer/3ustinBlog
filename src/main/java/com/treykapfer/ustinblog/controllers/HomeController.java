@@ -92,8 +92,10 @@ public class HomeController {
     	return "home.jsp";
 	}
 
-	@RequestMapping("/post")
-	public String post_1(){
+	@RequestMapping("/post/{id}")
+	public String post_1(@PathVariable("id") Long id, Model model){
+		Post post = postService.findOneByID(id);
+		model.addAttribute("post",post);
 		return "post.jsp";
 	}
 

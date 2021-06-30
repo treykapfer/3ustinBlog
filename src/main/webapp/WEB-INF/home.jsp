@@ -24,8 +24,8 @@
 			</nav>
 		</header>
 		<main>
-			<c:forEach items="${posts}" var="individualPost"> 
-					<a href="/post">${individualPost.title}</a>
+			<c:forEach items="${posts}" var="post"> 
+					<a href="/post/${post.id}">${post.title}</a>
 			</c:forEach>
 		</main>	
 		<footer>

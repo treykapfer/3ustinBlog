@@ -24,7 +24,9 @@
 			</nav>
 		</header>
 		<main>
-			<h1></h1>
+			<h1>${post.title}</h1>
+			<img href="${post.imageURL}">
+			<p>${post.content}</p>
 		</main>	
 		<footer>
 			<small class="text-warning text-right">${userID}</small>
