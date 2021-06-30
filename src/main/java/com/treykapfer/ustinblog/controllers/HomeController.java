@@ -94,12 +94,23 @@ public class HomeController {
 	}
 
 	@RequestMapping("/post/{id}")
-	public String post_1(@PathVariable("id") Long id, Model model){
+	public String post(@PathVariable("id") Long id, @ModelAttribute("comment") Comment comment, Model model){
 		Post post = postService.findOneByID(id);
 		List<Comment> comments = commentService.allComments();
 		model.addAttribute("post",post);
 		model.addAttribute("comments", comments);
 		return "post.jsp";
+	}
+
+	@RequestMapping(value="/post/{id}/newComment", method=RequestMethod.POST)
+	public String postNewComment(@Valid @ModelAttribute("comment") Comment comment, BindingResult result, @PathVariable("id") Long id, Model model){
+		
+		System.out.println(comment.getContent());
+		Post post = postService.findOneByID(id);
+		//comment.setPost(post);
+		commentService.createComment(comment);
+		return "redirect:/post/" + id;
+		
 	}
 
 }

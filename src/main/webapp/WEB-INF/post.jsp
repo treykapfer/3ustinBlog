@@ -29,6 +29,15 @@
 			<p>${post.content}</p>
 		</main>	
 		<footer>
+			<form:form method="POST" action="/post/${post.id}/newComment" modelAttribute="comment">
+				<div class="form">
+
+					<form:label path="content">Comment:</form:label>
+					<form:input type="text" path="content"/>
+
+					<input class="btn" type="submit" value="Submit"/>
+				</div>
+            </form:form>
 			<c:forEach items="${comments}" var="comment"> 
 				<p>${comment.content}</p>
 			</c:forEach>
