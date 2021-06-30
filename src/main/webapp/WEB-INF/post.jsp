@@ -41,7 +41,6 @@
 				<form:form method="POST" action="/post/${post.id}/newComment" modelAttribute="comment">
 					<div class="form">
 						<form:label path="content">Comment:</form:label>
-						<%-- TO DO - NEED HIDDEN INPUT FOR USER ID --%>
 						<form:textarea type="text" path="content" rows="4" cols="50"/>
 						<input class="btn" type="submit" value="Submit"/>
 					</div>
