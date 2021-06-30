@@ -27,7 +27,7 @@
 			<h1>${post.title}</h1>
 			<img href="${post.imageURL}">
 			<p>${post.content}</p>
-		</main>	
+		</main>
 		<footer>
 			<c:forEach items="${comments}" var="comment"> 
 				<p>${comment.content}</p>

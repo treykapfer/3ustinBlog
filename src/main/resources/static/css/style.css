@@ -45,7 +45,7 @@ body {
     }
 
 /* flex row */
-    main, footer, nav {
+    main, footer, nav, header {
         display: flex;
         flex-direction: row;
     }
@@ -72,6 +72,11 @@ body {
 
 /*CHILDREN OF CONTAINER*/
 /*HEADER*/
+header {
+    justify-content: space-between;
+    align-items: center;
+}
+
     nav {
         justify-content: flex-end;
     }
