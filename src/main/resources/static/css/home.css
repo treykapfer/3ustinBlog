@@ -49,7 +49,6 @@ main {
 .post_row {
     text-align: right;
     justify-content: space-between;
-    padding: var(--globalPad);
     overflow: hidden;
 }
 

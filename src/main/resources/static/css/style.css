@@ -78,7 +78,7 @@ a:hover {
     }
 
 /*global pading*/
-    header, main, footer {
+    header, main, footer, .post_row {
         padding: var(--globalPad);
     }
 
