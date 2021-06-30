@@ -7,8 +7,9 @@
     --secondaryColor: rgb(45, 25, 0);
     --dangerDark: rgb(73, 0, 12);
     --dangerLight: rgb(255, 155, 172);
-    --whiteSmoke: rgba(255, 255, 255, 0.74);
+    --highlight: rgba(255, 255, 255, 0.25);
     /* sizes */
+    --tinyEdge: 5px;
     --roundEdge: 10px;
     --rounderEdge: 25px;
     --globalMar: 1rem;
@@ -34,4 +35,53 @@ font-family: 'Roboto Slab', serif;
 main {
     background-image: url(../img/shadowlands_bg_fade.png);
     background-size: cover;
+}
+
+/*CONTAINER*/
+.post_container {
+    width: 80%;
+    margin: 0px auto;
+    margin-top: -1rem;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/*POST ROWS*/
+.post_row {
+    text-align: right;
+    justify-content: space-between;
+    padding: var(--globalPad);
+    overflow: hidden;
+}
+
+    .post_row:nth-child(2) {
+        text-align: left;
+        flex-direction: row-reverse;
+    }
+
+    .post_row:hover {
+        background-color: var(--highlight);
+    }
+
+    .post_row h3 {
+        font-family: var(--impactFont);
+        font-size: 230%;
+    }
+
+/*IMAGE*/
+.post_img {
+    background-color: black;
+    width: 276px;
+    height: 276px;
+}
+
+    .post_img img {
+        width: 276px;
+        height: 276px;
+        object-fit: scale-down;
+    }
+
+/*CONTENT*/
+.post_content {
+    align-self: center;
+    padding: 2rem;
 }
