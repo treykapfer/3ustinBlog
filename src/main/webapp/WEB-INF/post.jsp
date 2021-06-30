@@ -32,12 +32,16 @@
 				<p>${post.content}</p>
 			</div>
 			<div class="comment_container">
-				<c:forEach items="${comments}" var="comment"> 
+				<h3>Comments</h3>
+				<c:forEach items="${comments}" var="comment">
+					<%-- TO DO - NEED TO DISPLAY THE USER WHO CREATED THE COMMENT --%>
+					<p>${comment.user.username}</p>
 					<p>${comment.content}</p>
 				</c:forEach>
 				<form:form method="POST" action="/post/${post.id}/newComment" modelAttribute="comment">
 					<div class="form">
 						<form:label path="content">Comment:</form:label>
+						<%-- TO DO - NEED HIDDEN INPUT FOR USER ID --%>
 						<form:textarea type="text" path="content" rows="4" cols="50"/>
 						<input class="btn" type="submit" value="Submit"/>
 					</div>

@@ -39,6 +39,10 @@ main {
     flex-direction: column;
 }
 
+.post_container {
+    border-bottom: 2px dotted var(--dangerDark);
+}
+
 .post_container img {
     width: 276px;
 }
