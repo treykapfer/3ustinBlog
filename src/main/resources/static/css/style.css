@@ -117,6 +117,16 @@ header {
         margin: 0 var(--globalMar);
     }
 
+    nav a:hover {
+        background-image: url(../img/blue_flame.gif);
+        background-size:25%;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+
+        color: white;
+    }
+
 /*MAIN COMPONENTS*/
 .btn {
     align-self: center;
