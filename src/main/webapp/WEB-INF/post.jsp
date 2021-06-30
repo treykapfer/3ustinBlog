@@ -29,6 +29,9 @@
 			<p>${post.content}</p>
 		</main>	
 		<footer>
+			<c:forEach items="${comments}" var="comment"> 
+				<p>${comment.content}</p>
+			</c:forEach>
 			<small class="text-warning text-right">${userID}</small>
 		</footer>
 	</div>

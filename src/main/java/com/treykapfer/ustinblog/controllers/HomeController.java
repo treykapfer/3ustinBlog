@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.treykapfer.ustinblog.models.*;
+import com.treykapfer.ustinblog.services.CommentService;
 import com.treykapfer.ustinblog.services.PostService;
 import com.treykapfer.ustinblog.services.UserService;
 import com.treykapfer.ustinblog.validations.UserValidator;
@@ -28,11 +29,13 @@ public class HomeController {
 	private UserService userServ;
 	private UserValidator userVal;
 	private PostService postService;
+	private CommentService commentService;
 
-	public HomeController(UserService userServ, UserValidator userVal, PostService postService) {
+	public HomeController(UserService userServ, UserValidator userVal, PostService postService, CommentService commentService) {
 		this.userServ = userServ;
 		this.userVal = userVal;
 		this.postService = postService;
+		this.commentService = commentService;
 	}
 	
 	//pass in model attribute user
@@ -95,7 +98,9 @@ public class HomeController {
 	@RequestMapping("/post/{id}")
 	public String post_1(@PathVariable("id") Long id, Model model){
 		Post post = postService.findOneByID(id);
+		List<Comment> comments = commentService.allComments();
 		model.addAttribute("post",post);
+		model.addAttribute("comments", comments);
 		return "post.jsp";
 	}
 
