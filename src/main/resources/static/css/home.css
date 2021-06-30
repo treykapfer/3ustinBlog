@@ -31,6 +31,3 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif;
 */
 
-.post_row:nth-child(2) {
-    flex-direction: row-reverse;
-}

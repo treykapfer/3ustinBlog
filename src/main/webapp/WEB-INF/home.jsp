@@ -24,15 +24,15 @@
 		<main>
 			<div class="post_container">
 				<c:forEach items="${posts}" var="post">
-					<div class="post_row">
+					<a href="/post/${post.id}" class="post_row">
 						<div class="post_img">
-							<img src="${post.imageURL}"/>
+							<img src="${post.imageURL}">
 						</div>
 						<div class="post_content">
-							<a href="/post/${post.id}">${post.title}</a>
+							${post.title}
 							<p>${post.content}</p>
 						</div>
-					</div>
+					</a>
 				</c:forEach>
 			</div>
 		</main>	
