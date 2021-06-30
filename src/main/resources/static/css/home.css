@@ -3,7 +3,7 @@
 :root {
     /*color scheme*/
     --defaultColor: black;
-    --background: gold;
+    --tertiaryColor: gold;
     --secondaryColor: rgb(45, 25, 0);
     --dangerDark: rgb(73, 0, 12);
     --dangerLight: rgb(255, 155, 172);
