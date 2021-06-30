@@ -12,6 +12,9 @@
     --rounderEdge: 25px;
     --globalMar: 1rem;
     --globalPad: 1rem;
+    /*fonts*/
+    --defaultFont: 'Roboto', sans-serif;
+    --impactFont: 'Alegreya Sans SC', sans-serif;
 }
 
 /*IMPORTED FONTS*/
@@ -73,6 +76,10 @@ body {
     }
 
 /*MAIN*/
+main {
+    background-image: url(../img/shadowlands_bg_fade.png);
+    background-size: cover;
+}
 
     .left_container {
         flex: 2;
@@ -93,11 +100,21 @@ body {
         flex: 1;
         margin-left: var(--globalMar);
         margin-right: 3rem;
+
+        background-image: url(../img/ice_bg_fade.png);
+        background-size:cover;
+        
+        border: 2px solid black;
+        border-left: none;
     }
 
         .form {
             text-align: center;
             margin-bottom: var(--globalMar);
+        }
+
+        .form h2 {
+            font-family: var(--impactFont);
         }
 
             .btn {
@@ -106,11 +123,8 @@ body {
                 width: 144px;
                 height: 44px;
                 font-size: 125%;
+                font-family: var(--impactFont);
             }
-
-                .btn:hover {
-
-                }
 
             small {
                 color: var(--danger);
