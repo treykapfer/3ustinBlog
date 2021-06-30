@@ -24,9 +24,8 @@
         <main>
             <div class="left_container">
                 <!-- here is a preview of the blog -->
-                <h2>Welcome to 3ustin Blog</h2>
-                <p>Login/Register to continue</p>
-                <p>Dynamically rendered canvas with neat effect will be here with text overlayed</p>
+				<img src="/img/Wow_blog2.png" id="blog_logo_big">
+                <p>Login/register to continue...</p>
             </div>
             <div class="right_container">
                 <form method="POST" action="/login">
@@ -36,10 +35,12 @@
                         <label>Email:</label>
                         <input type="text" id="email" name="email"/>
 
+						<small><p></p></small>
+
                         <label>Password:</label>
                         <input type="password" id="password" name="password"/>
                         
-                        <small><p></p></small>
+                        <small><p>${error}</p></small>
 
                         <input class="btn" type="submit" value="Login"/>
                     </div>

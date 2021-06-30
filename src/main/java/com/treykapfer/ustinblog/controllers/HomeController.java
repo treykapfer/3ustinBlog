@@ -44,8 +44,6 @@ public class HomeController {
 		return "login.jsp";
 	}
 	
-	
-	//*****************
 	//LOGIN REG POST MAPPING
 	@PostMapping("/registration")
 	public String register(@Valid @ModelAttribute("user") User newUser, BindingResult result, HttpSession session) {
