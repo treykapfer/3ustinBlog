@@ -3,6 +3,8 @@ package com.treykapfer.ustinblog.controllers;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import java.util.*;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,7 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.treykapfer.ustinblog.models.User;
+import com.treykapfer.ustinblog.models.*;
+import com.treykapfer.ustinblog.services.PostService;
 import com.treykapfer.ustinblog.services.UserService;
 import com.treykapfer.ustinblog.validations.UserValidator;
 
@@ -24,10 +27,12 @@ public class HomeController {
 	
 	private UserService userServ;
 	private UserValidator userVal;
+	private PostService postService;
 
-	public HomeController(UserService userServ, UserValidator userVal) {
+	public HomeController(UserService userServ, UserValidator userVal, PostService postService) {
 		this.userServ = userServ;
 		this.userVal = userVal;
+		this.postService = postService;
 	}
 	
 	//pass in model attribute user
@@ -81,8 +86,15 @@ public class HomeController {
 	}
 
 	@RequestMapping("/home")
-    public String home() {
+    public String home(Model model) {
+		List<Post> posts = postService.allPosts();
+		model.addAttribute("posts",posts);
     	return "home.jsp";
+	}
+
+	@RequestMapping("/post")
+	public String post_1(){
+		return "post.jsp";
 	}
 
 }

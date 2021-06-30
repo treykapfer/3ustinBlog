@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page isErrorPage="true" %>
+<%@ page isErrorPage="true" %>    
 
 <!DOCTYPE html>
 <html>
@@ -24,9 +24,7 @@
 			</nav>
 		</header>
 		<main>
-			<c:forEach items="${posts}" var="individualPost"> 
-					<a href="/post">${individualPost.title}</a>
-			</c:forEach>
+			<h1></h1>
 		</main>	
 		<footer>
 			<small class="text-warning text-right">${userID}</small>
