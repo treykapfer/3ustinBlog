@@ -60,7 +60,7 @@ public class HomeController {
 			User u = userServ.registerUser(newUser);
 			session.setAttribute("sesUser", u);
 			session.setAttribute("userID", u.getId());
-			return "redirect:/";
+			return "redirect:/home";
 		}
 	}
 	

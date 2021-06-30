@@ -19,7 +19,7 @@
 		<header class="d-flex justify-content-between text-white bg-dark align-items-center p-2">
 			<h1>Welcome ${sesUser.username}</h1>
 			<nav>
-				<a class="btn btn-primary" href="/">Back Home</a>
+				<a class="btn btn-primary" href="/home">Back Home</a>
 				<a class="btn btn-primary" href="/logout">Logout</a>
 			</nav>
 		</header>
