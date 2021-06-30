@@ -40,7 +40,9 @@ public class HomeController {
 	
 	//pass in model attribute user
 	@GetMapping("/")
-	public String login(@ModelAttribute("user") User user) {
+	public String login(@ModelAttribute("user") User user, Model model) {
+		List<Post> posts = postService.allPosts();
+		model.addAttribute("posts",posts);
 		return "login.jsp";
 	}
 	

@@ -78,12 +78,12 @@ a:hover {
     }
 
 /*global padding*/
-    header, main, footer, .post_row {
+    header, main, footer, .post_row, .blog_card {
         padding: var(--globalPad);
     }
 
 /*tiny edge*/
-    .post_img {
+    .post_img, .blog_card, .blog_card img {
         border-radius: var(--tinyEdge);
     }
 
@@ -152,10 +152,5 @@ small {
 /*FOOTER*/
 footer {
     justify-content: space-between;
+    overflow: hidden;
 }
-
-    .blog_card {
-        background-color: var(--tertiaryColor);
-        width: 270px;
-        height: 270px;
-    }
