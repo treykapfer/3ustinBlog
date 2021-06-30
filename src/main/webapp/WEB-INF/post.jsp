@@ -27,7 +27,7 @@
 			<h1>${post.title}</h1>
 			<img href="${post.imageURL}">
 			<p>${post.content}</p>
-		</main>	
+		</main>
 		<footer>
 			<form:form method="POST" action="/post/${post.id}/newComment" modelAttribute="comment">
 				<div class="form">

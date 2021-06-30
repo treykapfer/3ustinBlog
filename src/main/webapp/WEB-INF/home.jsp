@@ -8,28 +8,39 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Ideas</title>
-	<link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<title>WoW:Blog - Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Audiowide&family=Bebas+Neue&family=Bowlby+One+SC&family=Bungee&family=Dela+Gothic+One&family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
-		<header class="d-flex justify-content-between text-white bg-dark align-items-center p-2">
+		<header>
 			<h1>Welcome ${sesUser.username}</h1>
 			<nav>
-				<a class="btn btn-primary" href="/about">Meet the Devs</a>
-				<a class="btn btn-primary" href="/logout">Logout</a>
+				<a href="/about">Meet the Devs</a>
+				<a href="/logout">Logout</a>
 			</nav>
 		</header>
 		<main>
-			<c:forEach items="${posts}" var="post"> 
-					<a href="/post/${post.id}">${post.title}</a>
-			</c:forEach>
+			<div class="post_container">
+				<c:forEach items="${posts}" var="post">
+					<a href="/post/${post.id}" class="post_row">
+						<div class="post_img">
+							<img src="${post.imageURL}">
+						</div>
+						<div class="post_content">
+							<h3>${post.title}</h3>
+							<p>${post.content}</p>
+						</div>
+					</a>
+				</c:forEach>
+			</div>
 		</main>	
 		<footer>
-			<small class="text-warning text-right">${userID}</small>
+			<small>${userID}</small>
 		</footer>
 	</div>
 </body>

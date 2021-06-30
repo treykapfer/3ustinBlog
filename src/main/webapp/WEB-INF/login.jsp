@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <title>Login & Registration</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/login.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Audiowide&family=Bebas+Neue&family=Bowlby+One+SC&family=Bungee&family=Dela+Gothic+One&family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -17,6 +18,7 @@
 <body>
 	<div class="container">
         <header>
+			<h1></h1>
             <nav>
                 <a href="/about">Meet the Devs</a>
             </nav>
@@ -25,7 +27,6 @@
             <div class="left_container">
                 <!-- here is a preview of the blog -->
 				<img src="/img/Wow_blog2.png" id="blog_logo_big">
-                <p>Login/register to continue...</p>
             </div>
             <div class="right_container">
                 <form method="POST" action="/login">
