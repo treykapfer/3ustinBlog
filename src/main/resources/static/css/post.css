@@ -35,44 +35,11 @@ font-family: 'Roboto Slab', serif;
 main {
     background-image: url(../img/shadowlands_bg_fade.png);
     background-size: cover;
+
+    flex-direction: column;
 }
 
-/*POST ROWS*/
-.post_row {
-    text-align: right;
-    justify-content: space-between;
-    overflow: hidden;
-}
-
-    .post_row:nth-child(2) {
-        text-align: left;
-        flex-direction: row-reverse;
-    }
-
-    .post_row:hover {
-        background-color: var(--highlight);
-    }
-
-    .post_row h3 {
-        font-family: var(--impactFont);
-        font-size: 230%;
-    }
-
-/*IMAGE*/
-.post_img {
-    background-color: black;
+.post_container img {
     width: 276px;
-    height: 276px;
 }
 
-    .post_img img {
-        width: 276px;
-        height: 276px;
-        object-fit: scale-down;
-    }
-
-/*CONTENT*/
-.post_content {
-    align-self: center;
-    padding: 2rem;
-}

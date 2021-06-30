@@ -129,6 +129,18 @@ header {
     }
 
 /*MAIN COMPONENTS*/
+/*CONTAINER*/
+.post_container {
+    width: 80%;
+    margin: 0px auto;
+    margin-top: -1rem;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+input {
+    text-align: center;
+}
+
 .btn {
     align-self: center;
     color: white;
@@ -152,5 +164,5 @@ small {
 /*FOOTER*/
 footer {
     justify-content: space-between;
-    overflow: hidden;
+    overflow-x: hidden;
 }

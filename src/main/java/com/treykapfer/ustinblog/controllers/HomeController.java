@@ -95,7 +95,7 @@ public class HomeController {
     	return "home.jsp";
 	}
 
-	@RequestMapping("/post/{id}")
+	@GetMapping("/post/{id}")
 	public String post(@PathVariable("id") Long id, @ModelAttribute("comment") Comment comment, Model model){
 		Post post = postService.findOneByID(id);
 		List<Comment> comments = commentService.allComments();
