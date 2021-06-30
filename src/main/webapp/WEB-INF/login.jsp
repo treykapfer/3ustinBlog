@@ -75,22 +75,13 @@
             <!-- find blog posts with limit 4 and render dynamically -->
             <!-- only displays 3 in tablet view -->
             <!-- only displays 2 in mobile view -->
-            <div class="blog_card">
-                <p>Blog Post Preview Here</p>
-                <p>Text overlayed over the uploaded photo</p>
-            </div>
-            <div class="blog_card">
-                <p>Blog Post Preview Here</p>
-                <p>Text overlayed over the uploaded photo</p>
-            </div>
-            <div class="blog_card">
-                <p>Blog Post Preview Here</p>
-                <p>Text overlayed over the uploaded photo</p>
-            </div>
-            <div class="blog_card">
-                <p>Blog Post Preview Here</p>
-                <p>Text overlayed over the uploaded photo</p>
-            </div>
+            <c:forEach items="${posts}" var="post">
+                <div class="blog_card">
+                    <img src="${post.imageURL}">
+                    <h4>${post.title}</h4>
+                    <p>${post.content}</p>
+                </div>
+            </c:forEach>
         </footer>
     </div>
 </body>
