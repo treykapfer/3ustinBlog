@@ -5,7 +5,8 @@
     --defaultColor: black;
     --background: gold;
     --secondaryColor: rgb(45, 25, 0);
-    --danger: rgb(73, 0, 12);
+    --dangerDark: rgb(73, 0, 12);
+    --dangerLight: rgb(255, 155, 172);
     --whiteSmoke: rgba(255, 255, 255, 0.74);
     /* sizes */
     --roundEdge: 10px;
@@ -129,13 +130,13 @@ main {
             }
 
                 .btn:hover {
-                    background-color: var(--danger);
+                    background-color: var(--dangerDark);
                     font-size: 110%;
                     transition: 250ms;
                 }
 
             small {
-                color: var(--danger);
+                color: var(--dangerLight);
             }
 
 /*FOOTER*/
