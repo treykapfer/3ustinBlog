@@ -78,8 +78,8 @@ main {
 /*FOOTER*/
     .blog_card {
         
-        flex-basis: 270px;
-        height: 270px;
+        flex-basis: 224px;
+        height: 224px;
         flex-shrink: 0;
 
         position:relative;
@@ -105,8 +105,8 @@ main {
     .blog_card img {
         position: absolute;
         z-index: 0;
-        width: 270px;
-        height: 270px;
+        width: 224px;
+        height: 224px;
         object-fit: scale-down;
         opacity: 25%;
         object-position:top;
