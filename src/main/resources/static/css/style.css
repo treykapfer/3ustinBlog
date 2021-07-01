@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 /*secondary bg color*/
     header, footer, .btn {
         background-color: var(--secondaryColor);
-        background-image: url(../img/rough_texture_trans_15.png);
+        background-image: url(../img/concrete_seamless_trans_15.png);
     }
 
 /*global padding*/
@@ -118,6 +118,11 @@ h1, h2, h3, h4, h5, h6 {
 header {
     justify-content: space-between;
     align-items: center;
+
+        -moz-box-shadow:    inset 0 -5px 8px #000000;
+        -webkit-box-shadow: inset 0 -5px 8px #000000;
+        box-shadow:         inset 0 -5px 8px #000000;
+
 }
     header h1 {
         color: var(--tertiaryColor);
@@ -198,6 +203,10 @@ small {
 footer {
     justify-content: space-between;
     overflow-x: scroll;
+
+    -moz-box-shadow:    inset 0 5px 8px #000000;
+    -webkit-box-shadow: inset 0 5px 8px #000000;
+    box-shadow:         inset 0 5px 8px #000000;
 }
 
 /*INFO FOR MEDIA QUERIES*/
