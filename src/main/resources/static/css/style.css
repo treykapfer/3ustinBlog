@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 /* flex row */
-    main, footer, nav, header, .post_row, .post_wrap, .likes {
+    main, footer, nav, header, .post_row, .post_wrap, .likes, .comment_header {
         display: flex;
         flex-direction: row;
     }

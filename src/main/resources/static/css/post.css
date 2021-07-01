@@ -73,3 +73,8 @@ main {
     .comment_card {
         background-color: var(--highlight);
     }
+
+    .comment_header {
+        width: 100%;
+        justify-content: space-between;
+    }

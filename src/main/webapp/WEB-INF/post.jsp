@@ -57,23 +57,25 @@
 				<h2>Comments</h2>
 				<c:forEach items="${post.comments}" var="comment">
 					<div class="comment_card">
-						<div class="likes">
-							<small>${comment.likers.size()} Like(s)</small>
-							<c:choose>
-								<c:when test="${comment.likers.contains(userInDB) }">
-									<form action = "/comment/${comment.id}/${post.id}/unLike" method="post">
-									<button type="submit" class="btnblue">UnLike</button>
-									</form>
-								</c:when>
+						<div class="comment_header">
+							<p>${comment.user.username} says:</p>
+							<div class="likes">
+								<small>${comment.likers.size()} Like(s)</small>
+								<c:choose>
+									<c:when test="${comment.likers.contains(userInDB) }">
+										<form action = "/comment/${comment.id}/${post.id}/unLike" method="post">
+										<button type="submit" class="btnblue">UnLike</button>
+										</form>
+									</c:when>
 
-								<c:otherwise>
-									<form action = "/comment/${comment.id}/${post.id}/like" method="post">
-									<button type="submit" class="btnblue">Like</button>
-									</form>
-								</c:otherwise>
-							</c:choose>
+									<c:otherwise>
+										<form action = "/comment/${comment.id}/${post.id}/like" method="post">
+										<button type="submit" class="btnblue">Like</button>
+										</form>
+									</c:otherwise>
+								</c:choose>
+							</div>
 						</div>
-						<p>${comment.user.username} says:</p>
 						<p class="high_font">${comment.content}</p>
 						<small>Posted at ${comment.createdAt}</small>
 					</div>

@@ -20,7 +20,7 @@
         <header>
 			<h1></h1>
             <nav>
-                <a href="/about">Meet the Devs</a>
+                <a></a>
             </nav>
         </header>
         <main>
