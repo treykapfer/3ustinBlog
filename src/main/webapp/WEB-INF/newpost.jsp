@@ -30,7 +30,7 @@
 				<form:form action="/post/add" method="post" modelAttribute="newPost" class="form">
 					<h1>New Post</h1>
 
-					<form:input path="user" type="hidden" value="${UserID}"/>
+					<form:input path="user" type="hidden" value="${sesUser.id}"/>
 
 					<form:label path="title">Post Title</form:label>
 					<form:input path="title" type="text" placeholder="Post Title"/>
@@ -41,7 +41,7 @@
 					<small><p><form:errors path="content" type="text"/></p></small>
 
 					<form:label path="imageURL">Image URL</form:label>
-					<form:input path="imageURL" type="text" placeholder="paste Image URL"/>
+					<form:input path="imageURL" type="text" placeholder="Paste Image URL"/>
 					<small><p><form:errors path="imageURL" type="text"/></p></small>
 					
 					<input type="submit" value="Create" class="btn"/>
