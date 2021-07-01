@@ -1,7 +1,6 @@
 /* GLOBAL VARIABLES */
 
 @import './root.css';
-@import './mediaquery.css';
 
 /*IMPORTED FONTS*/
 /*
@@ -238,3 +237,66 @@ small {
         color: var(--textHighlight);
         margin: .25rem;
     }
+
+/*ALL MEDIA QUERIES*/
+/*TABLET BREAK 972*/
+@media only screen and (max-width: 972px) {
+    :root {
+        --boxHeight: 242px;
+    }
+
+    main {
+        font-size: 85%;
+    }
+
+}
+
+/*PHONE BREAK 720*/
+@media only screen and (max-width: 720px) {
+    
+    :root {
+        --boxHeight: 170px;
+    }
+    
+    /*NAV*/
+    header {
+        display: flex;
+        flex-direction: column;
+        text-indent: 0px;
+    }
+
+    header h1 {
+        margin: 0px auto;
+    }
+
+    /*MAIN*/
+    main {
+        flex-direction: column;
+    }
+
+    .right_container {
+        margin: var(--globalMar);
+    }
+
+    .left_container {
+        display: flex;
+        justify-content: center;
+        margin: var(--globalMar);
+    }
+
+    .post_row {
+        flex-direction: column;
+    }
+        .post_row:nth-child(2n) {
+            flex-direction: column;
+        }
+
+    .post_content {
+        text-align: center;
+    }
+
+    .post_img {
+        display: none;
+    }
+
+}
