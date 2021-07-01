@@ -90,7 +90,7 @@ public class HomeController {
 
 	@RequestMapping("/home")
     public String home(Model model) {
-		List<Post> posts = postService.allPosts();
+		List<Post> posts = postService.allPostsDesc();
 		model.addAttribute("posts",posts);
 		return "home.jsp";
 	}

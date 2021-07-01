@@ -23,6 +23,10 @@ public class PostService {
     public List<Post> allPosts() {
         return PostRepository.findAll();
     }
+    //returns all the posts in reverse order
+    public List<Post> allPostsDesc() {
+        return PostRepository.findAllReverse();
+    }
     // creates a post
     public Post createPost(Post b) {
         return PostRepository.save(b);
