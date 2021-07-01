@@ -47,7 +47,7 @@ font-family: 'Roboto Slab', serif;
     }
 
     .post_row:hover {
-        background-color: var(--highlight);
+        background-color: var(--impactLight);
     }
 
     .post_row h3 {
