@@ -2,6 +2,7 @@ package com.treykapfer.ustinblog.controllers;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import javax.validation.constraints.Email;
 
 import java.util.*;
 
@@ -51,7 +52,9 @@ public class HomeController {
 	public String register(@Valid @ModelAttribute("user") User newUser, BindingResult result, HttpSession session) {
 		//add validator
 		userVal.validate(newUser, result);
-		
+		if(userServ.findByEmail(newUser.getEmail()) != null){
+			result.rejectValue("email", null, "Email already used.");
+		}
 		//regular checks
 		if(result.hasErrors()) {
 			System.out.println(result);

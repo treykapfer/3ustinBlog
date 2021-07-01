@@ -15,12 +15,14 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
+import org.hibernate.validator.constraints.UniqueElements;
 import org.springframework.data.annotation.Transient;
 
 @Entity
@@ -33,7 +35,8 @@ public class User {
     @NotEmpty(message="Username field cannot be empty")
     @Size(min = 3, message="Username must be at least 3 characters")
     private String username;
-    
+	
+	// @UniqueElements(message = "Email already exists")
     @NotEmpty(message="Email field cannot be empty")
     @Email(message="You must enter a valid email address")
     private String email;
