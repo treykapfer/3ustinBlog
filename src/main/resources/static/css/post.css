@@ -39,11 +39,17 @@ main {
     flex-direction: column;
 }
 
-.post_container {
+.post_wrap {
     border-bottom: 2px dotted var(--dangerDark);
+    align-items: center;
 }
 
-.post_container img {
+.post_wrap img {
     width: 276px;
 }
 
+.post_img {
+    background-color: black;
+    width: 276px;
+    height: 276px;
+}

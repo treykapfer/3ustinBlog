@@ -54,7 +54,6 @@ main {
     }
 
     .post_row h3 {
-        font-family: var(--impactFont);
         font-size: 230%;
     }
 
@@ -63,16 +62,4 @@ main {
     background-color: black;
     width: 276px;
     height: 276px;
-}
-
-    .post_img img {
-        width: 276px;
-        height: 276px;
-        object-fit: scale-down;
-    }
-
-/*CONTENT*/
-.post_content {
-    align-self: center;
-    padding: 2rem;
 }

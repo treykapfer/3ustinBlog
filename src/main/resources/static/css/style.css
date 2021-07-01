@@ -5,6 +5,7 @@
     --defaultColor: black;
     --tertiaryColor: gold;
     --secondaryColor: rgb(45, 25, 0);
+    --impactLight: rgba(0, 225, 255, 0.10);
     --dangerDark: rgb(73, 0, 12);
     --dangerLight: rgb(255, 155, 172);
     --highlight: rgba(255, 255, 255, 0.25);
@@ -58,6 +59,10 @@ a:hover {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--impactFont);
+}
+
 /*COMBINED PROPS*/
 /* flex column */
     .container, .form, .post_container, .comment_container {
@@ -66,7 +71,7 @@ a:hover {
     }
 
 /* flex row */
-    main, footer, nav, header, .post_row {
+    main, footer, nav, header, .post_row, .post_wrap {
         display: flex;
         flex-direction: row;
     }
@@ -83,7 +88,7 @@ a:hover {
     }
 
 /*tiny edge*/
-    .post_img, .blog_card, .blog_card img {
+    .post_img, .blog_card, .blog_card img, .post_content, .post_img img {
         border-radius: var(--tinyEdge);
     }
 
@@ -104,7 +109,6 @@ header {
 }
     header h1 {
         color: var(--tertiaryColor);
-        font-family: var(--impactFont);
         margin-left: 1.5rem;
     }
 
@@ -122,15 +126,14 @@ header {
         background-image: url(../img/blue_flame.gif);
         background-size:25%;
         background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: center;
+        background-position: center;
 
         color: white;
     }
 
 /*MAIN COMPONENTS*/
 /*CONTAINER*/
-.post_container, .comment_container {
+.post_container, .comment_container, .post_wrap {
     width: 80%;
     margin: 0px auto;
     background-color: rgba(0, 0, 0, 0.25);
@@ -162,6 +165,21 @@ input {
 
 small {
     color: var(--dangerLight);
+}
+
+/*GLOBAL POST INFO*/
+/*CONTENT*/
+.post_content {
+    align-self: center;
+    padding: 2rem;
+    
+    background-color: var(--impactLight);
+}
+
+.post_img img {
+    width: 276px;
+    height: 276px;
+    object-fit: scale-down;
 }
 
 /*FOOTER*/

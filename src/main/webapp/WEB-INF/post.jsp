@@ -26,20 +26,23 @@
 			</nav>
 		</header>
 		<main>
-			<div class="post_container">
+			<div class="post_wrap">
 				<div class="post_img">
 					<img src="${post.imageURL}">
 				</div>
 				<div class="post_content">
 					<h1>${post.title}</h1>
+					<h6>${post.user.username}</h6>
 					<p>${post.content}</p>
 				</div>
 			</div>
 			<div class="comment_container">
 				<h3>Comments</h3>
 				<c:forEach items="${comments}" var="comment">
-					<p>${comment.user.username}</p>
-					<p>${comment.content}</p>
+					<div class="comment_card">
+						<p>${comment.user.username}</p>
+						<p>${comment.content}</p>
+					</div>
 				</c:forEach>
 				<form:form method="POST" action="/post/${post.id}/newComment" modelAttribute="comment">
 					<div class="form">

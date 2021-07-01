@@ -71,10 +71,6 @@ main {
         color: white;
     }
 
-    .form h2 {
-        font-family: var(--impactFont);
-    }
-
 /*FOOTER*/
     .blog_card {
         
