@@ -22,6 +22,7 @@
 			<nav>
 				<a href="/home">Back Home</a>
 				<a href="/about">Meet the Devs</a>
+				<a href="/post/new">Create Post</a>
 				<a href="/logout">Logout</a>
 			</nav>
 		</header>

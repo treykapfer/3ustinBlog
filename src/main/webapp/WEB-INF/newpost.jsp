@@ -8,41 +8,43 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>New Post</title>
-    <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Audiowide&family=Bebas+Neue&family=Bowlby+One+SC&family=Bungee&family=Dela+Gothic+One&family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>WoW:Blog - New Post</title>
 </head>
 <body>
   <div class="container">
-    	<header class="d-flex justify-content-between text-white bg-dark align-items-center p-2">
-			<h1>Welcome ${sesUser.username}</h1>
+    	<header>
+			<h1></h1>
 			<nav>
-				<a class="btn btn-primary" href="/posts">Home</a>
-				<a class="btn btn-primary" href="/logout">Logout</a>
+				<a href="/home">Back Home</a>
+				<a href="/about">Meet the Devs</a>
+				<a href="/logout">Logout</a>
 			</nav>
 		</header>
-	<main>
+		<main>
 		<h1>New Post</h1>
-		<form:form action="/post/add" method="post" modelAttribute="newPost" class="d-flex flex-column w-50">
-			<form:input path="user" type="hidden" value="${sesUser.id}"/>
-			
-			<form:label path="title">Post Name</form:label>
-			<form:input path="title" type="text" placeholder="Post Title"/>
-			<form:errors path="title" type="text" class="text-danger" />
+			<form:form action="/post/add" method="post" modelAttribute="newPost">
+				<form:input path="user" type="hidden" value="${UserID}"/>
+				
+				<form:label path="title">Post Name</form:label>
+				<form:input path="title" type="text" placeholder="Post Title"/>
+				<form:errors path="title" type="text"/>
 
-			<form:label path="content">Post Name</form:label>
-			<form:input path="content" type="text" placeholder="paste Image URL"/>
-			<form:errors path="content" type="text" class="text-danger" />
+				<form:label path="content">Post Name</form:label>
+				<form:input path="content" type="text" placeholder="paste Image URL"/>
+				<form:errors path="content" type="text"/>
 
-			<form:label path="imageurl">Post Name</form:label>
-			<form:input path="imageurl" type="text" placeholder="paste Image URL"/>
-			<form:errors path="imageurl" type="text" class="text-danger" />
-			
-			<input type="submit" value="Create" class="btn btn-sm btn-primary w-25 mt-3" />
-			
-		</form:form>
-	</main>
+				<form:label path="imageURL">Post Name</form:label>
+				<form:input path="imageURL" type="text" placeholder="paste Image URL"/>
+				<form:errors path="imageURL" type="text"/>
+				
+				<input type="submit" value="Create"/>
+				
+			</form:form>
+		</main>
   </div>
 </body>
 </html>

@@ -21,6 +21,7 @@
 			<h1>Welcome ${sesUser.username}</h1>
 			<nav>
 				<a href="/about">Meet the Devs</a>
+				<a href="/post/new">Create Post</a>
 				<a href="/logout">Logout</a>
 			</nav>
 		</header>
