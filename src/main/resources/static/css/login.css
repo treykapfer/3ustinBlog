@@ -77,8 +77,12 @@ main {
 
 /*FOOTER*/
     .blog_card {
-        width: 270px;
+        
+        flex-basis: 270px;
         height: 270px;
+        flex-shrink: 0;
+
+        position:relative;
         overflow: hidden;
         background-color: var(--highlight);
 

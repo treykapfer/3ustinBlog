@@ -167,5 +167,7 @@ small {
 /*FOOTER*/
 footer {
     justify-content: space-between;
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
+
+/*ALL MEDIA QUERIES*/
