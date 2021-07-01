@@ -44,7 +44,7 @@ main {
     overflow: hidden;
 }
 
-    .post_row:nth-child(2) {
+    .post_row:nth-child(2n) {
         text-align: left;
         flex-direction: row-reverse;
     }
