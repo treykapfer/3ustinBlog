@@ -1,3 +1,3 @@
 javaAlert  = () => {
-    alert("Please Log In.");
+    alert("Please login to access the blog pages");
 }
