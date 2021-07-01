@@ -72,9 +72,6 @@
 			</div>
 		</main>
 		<footer>
-            <!-- find blog posts with limit 4 and render dynamically -->
-            <!-- only displays 3 in tablet view -->
-            <!-- only displays 2 in mobile view -->
             <c:forEach items="${posts}" var="post">
                 <div class="blog_card">
                     <img src="${post.imageURL}">

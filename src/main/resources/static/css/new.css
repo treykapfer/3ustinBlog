@@ -34,29 +34,14 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif;
 */
 
-/*POST ROWS*/
-.post_row {
-    text-align: right;
-    justify-content: space-between;
-    overflow: hidden;
+h1 {
+    color: var(--tertiaryColor);
 }
 
-    .post_row:nth-child(2n) {
-        text-align: left;
-        flex-direction: row-reverse;
-    }
+input, textarea {
+    width: 75%;
+}
 
-    .post_row:hover {
-        background-color: var(--highlight);
-    }
-
-    .post_row h3 {
-        font-size: 230%;
-    }
-
-/*IMAGE*/
-.post_img {
-    background-color: black;
-    width: 276px;
-    height: 276px;
+.form {
+    align-items: center;
 }

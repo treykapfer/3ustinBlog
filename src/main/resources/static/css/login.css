@@ -67,12 +67,6 @@ main {
     border-left: none;
 }
 
-    .form {
-        text-align: center;
-        margin-bottom: var(--globalMar);
-        color: var(--textHighlight);
-    }
-
 /*FOOTER*/
     .blog_card {
         

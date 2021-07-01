@@ -149,6 +149,11 @@ header {
     }
 
 /*MAIN COMPONENTS*/
+main {
+    background-image: url(../img/shadowlands_large_edit.png);
+    background-size: cover;
+    background-color: var(--defaultColor);
+}
 /*CONTAINER*/
 .post_container, .comment_container, .post_wrap {
     width: 80%;
@@ -182,6 +187,13 @@ input {
 
 small {
     color: var(--dangerLight);
+}
+
+/*FORM*/
+.form {
+    text-align: center;
+    margin-bottom: var(--globalMar);
+    color: var(--textHighlight);
 }
 
 /*GLOBAL POST INFO*/

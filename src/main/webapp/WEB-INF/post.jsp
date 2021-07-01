@@ -60,7 +60,6 @@
 				</c:forEach>
 				<form:form method="POST" action="/post/${post.id}/newComment" modelAttribute="comment" id="comment_form">
 					<div class="form">
-						<form:label path="content">Comment:</form:label>
 						<form:textarea type="text" path="content" rows="4" cols="50"/>
 						<input class="btn" type="submit" value="Comment"/>
 					</div>
