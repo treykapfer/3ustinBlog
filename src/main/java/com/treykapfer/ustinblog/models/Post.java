@@ -36,6 +36,7 @@ public class Post {
     @NotEmpty(message="Content field cannot be empty")
     private String content;
 
+    @Size(max = 255, message="img text can't be over 255")
     @NotEmpty(message="Image URL field cannot be empty")
     private String imageURL;
     
