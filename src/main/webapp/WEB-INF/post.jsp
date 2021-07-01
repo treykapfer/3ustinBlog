@@ -32,7 +32,7 @@
 				</div>
 				<div class="post_content">
 					<h1>${post.title}</h1>
-					<h6>${post.user.username}</h6>
+					<h6>By ${post.user.username}</h6>
 					<p>${post.content}</p>
 				</div>
 			</div>

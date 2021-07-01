@@ -33,9 +33,8 @@ font-family: 'Roboto Slab', serif;
 */
 
 main {
-    background-image: url(../img/shadowlands_bg_fade.png);
+    background-image: url(../img/shadowlands_large.jpg);
     background-size: cover;
-
     flex-direction: column;
 }
 
@@ -53,3 +52,10 @@ main {
     width: 276px;
     height: 276px;
 }
+
+.post_content {
+    color: var(--tertiaryColor);
+}
+    .post_content p {
+        color: white;
+    }
