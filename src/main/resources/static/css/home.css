@@ -52,6 +52,7 @@ font-family: 'Roboto Slab', serif;
 
     .post_row h3 {
         font-size: 230%;
+        margin: .5rem auto;
     }
 
 /*IMAGE*/

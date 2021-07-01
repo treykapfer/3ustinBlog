@@ -34,6 +34,7 @@
 						</div>
 						<div class="post_content">
 							<h3>${post.title}</h3>
+							<small>Posted by ${post.user.username} at ${post.createdAt} — ${post.likers.size()} Like(s)</small>
 							<p>${post.content}</p>
 						</div>
 					</a>
