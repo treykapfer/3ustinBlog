@@ -13,7 +13,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Audiowide&family=Bebas+Neue&family=Bowlby+One+SC&family=Bungee&family=Dela+Gothic+One&family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
-	<title>WoW:Blog - Dashboard</title>
+	<title>WoW:Blog — Dashboard</title>
 </head>
 <body>
 	<div class="container">
@@ -30,7 +30,7 @@
 				<c:forEach items="${posts}" var="post">
 					<a href="/post/${post.id}" class="post_row">
 						<div class="post_img">
-							<img src="${post.imageURL}">
+							<img src="${post.imageURL}" alt="Image Failed to Load">
 						</div>
 						<div class="post_content">
 							<h3>${post.title}</h3>
