@@ -137,6 +137,20 @@ public class HomeController {
 		
 	}
 
+	@PostMapping("comment/{cID}/{pID}/like")
+	public String likeComment(@PathVariable("cID") Long cID, @PathVariable("pID") Long pID, HttpSession session) {
+		User user = (User) session.getAttribute("sesUser");
+		this.commentService.addLike(cID, user.getId());
+		return "redirect:/post/" + pID;
+	}
+
+	@PostMapping("comment/{cID}/{pID}/unLike")
+	public String unLikeComment(@PathVariable("cID") Long cID, @PathVariable("pID") Long pID, HttpSession session) {
+		User user = (User) session.getAttribute("sesUser");
+		this.commentService.unLike(cID, user.getId());
+		return "redirect:/post/" + pID;
+	}
+
 	//CREATE NEW
 	@GetMapping("/post/new")
 	public String addPost(Model model, HttpSession session) {

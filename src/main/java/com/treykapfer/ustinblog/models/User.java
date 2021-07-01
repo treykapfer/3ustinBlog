@@ -65,7 +65,16 @@ public class User {
 	private List<Post> postsLiked;
 
 	@OneToMany(mappedBy="user", fetch = FetchType.LAZY)
-    private List<Comment> comments;
+	private List<Comment> comments;
+	
+	//To create the relationship between User and Liking a Post
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(
+		name = "comment_likers",
+		joinColumns = @JoinColumn(name = "user_id"),
+		inverseJoinColumns = @JoinColumn(name = "comment_id")
+	)
+	private List<Comment> commentsLiked;
 
 	//>>>likes (many to many users, many to one post, many to one comment)
     
