@@ -14,9 +14,7 @@ import com.treykapfer.ustinblog.models.Post;
 public interface PostRepository extends CrudRepository<Post, Long> {
     List<Post> findAll();
 
-    @Query("SELECT * FROM posts ORDER BY created_at DESC;")
+    @Query(value="SELECT * FROM posts ORDER BY created_at DESC;", nativeQuery=true)
     List<Post> findAllReverse();
-
-
 
 }
