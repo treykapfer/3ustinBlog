@@ -92,7 +92,7 @@ public class HomeController {
     public String home(Model model) {
 		List<Post> posts = postService.allPosts();
 		model.addAttribute("posts",posts);
-    	return "home.jsp";
+		return "home.jsp";
 	}
 
 	@GetMapping("/post/{id}")
@@ -118,6 +118,28 @@ public class HomeController {
 		commentService.createComment(newComment);
 		return "redirect:/post/" + id;
 		
+	}
+
+	//CREATE NEW
+	@GetMapping("/post/new")
+	public String addPost(Model model, HttpSession session) {
+		Long id = (Long) session.getAttribute("userID");
+		User u = userServ.findUserById(id);
+		model.addAttribute("sesUser",u);
+		
+		model.addAttribute("newPost", new Post());
+		model.addAttribute("allPosts", postService.allPosts());
+		return "newpost.jsp";
+	}
+
+	@PostMapping("/post/add")
+	public String createPost(@Valid @ModelAttribute("newPost") Post newPost, BindingResult result, Model model, HttpSession session) {
+		if (result.hasErrors()) {
+			System.out.println(result);
+			return "newpost.jsp";
+		}
+		postServ.createPost(newPost);
+		return "redirect:/home";
 	}
 
 }
