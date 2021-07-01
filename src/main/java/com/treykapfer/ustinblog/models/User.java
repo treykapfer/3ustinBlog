@@ -3,6 +3,7 @@ package com.treykapfer.ustinblog.models;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Transient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -23,7 +24,6 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.*;
 
 import org.hibernate.validator.constraints.UniqueElements;
-import org.springframework.data.annotation.Transient;
 
 @Entity
 @Table(name="users")
