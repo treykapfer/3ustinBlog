@@ -138,7 +138,7 @@ public class HomeController {
 			System.out.println(result);
 			return "newpost.jsp";
 		}
-		postServ.createPost(newPost);
+		postService.createPost(newPost);
 		return "redirect:/home";
 	}
 

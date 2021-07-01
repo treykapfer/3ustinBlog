@@ -24,7 +24,7 @@
 		</header>
 	<main>
 		<h1>New Post</h1>
-		<form:form action="/posts/add" method="post" modelAttribute="newPost" class="d-flex flex-column w-50">
+		<form:form action="/post/add" method="post" modelAttribute="newPost" class="d-flex flex-column w-50">
 			<form:input path="user" type="hidden" value="${sesUser.id}"/>
 			
 			<form:label path="title">Post Name</form:label>
