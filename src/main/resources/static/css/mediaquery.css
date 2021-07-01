@@ -34,30 +34,4 @@ font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif;
 */
 
-/*POST ROWS*/
-.post_row {
-    text-align: right;
-    justify-content: space-between;
-    overflow: hidden;
-}
-
-    .post_row:nth-child(2n) {
-        text-align: left;
-        flex-direction: row-reverse;
-    }
-
-    .post_row:hover {
-        background-color: var(--highlight);
-    }
-
-    .post_row h3 {
-        font-size: 230%;
-        margin: .5rem auto;
-    }
-
-/*IMAGE*/
-.post_img {
-    background-color: rgba(0, 0, 0, 0.50);
-    width: 276px;
-    height: 276px;
-}
+/*ALL MEDIA QUERIES*/
