@@ -42,6 +42,16 @@ public class Comment {
     @JoinColumn(name="user_id")
     private User user;
 
+
+    //To create the relationship between User and Liking a Post
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(
+		name = "comment_likers",
+		joinColumns = @JoinColumn(name = "comment_id"),
+		inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private List<User> likers;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="post_id")
     private Post post;
@@ -69,6 +79,13 @@ public class Comment {
 		this.post = post;
 	}
 
+    public List<User> getLikers(){
+        return this.likers;
+    }
+
+    public void setLikers(List<User> likers){
+        this.likers = likers;
+    }
     //for self
 
     public Long getId() {
