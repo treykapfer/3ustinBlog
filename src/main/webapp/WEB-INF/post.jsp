@@ -34,6 +34,18 @@
 					<h1>${post.title}</h1>
 					<h6>Posted by ${post.user.username} at ${post.createdAt}</h6>
 					<p>${post.content}</p>
+					<p>${post.likers.size()}</p>
+					<c:choose>
+						<c:when test="${post.likers.contains(userInDB) }">
+							<form action = "/post/${post.id}/unLike" method="post">
+							<button type="submit">UnLike</button>
+						</c:when>
+
+						<c:otherwise>
+							<form action = "/post/${post.id}/like" method="post">
+							<button type="submit">Like</button>
+						</c:otherwise>
+					</c:choose>
 				</div>
 			</div>
 			<div class="comment_container">

@@ -6,16 +6,18 @@ import java.util.Optional;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
-import com.treykapfer.ustinblog.models.Post;
+import com.treykapfer.ustinblog.models.*;
 import com.treykapfer.ustinblog.repositories.PostRepository;
 
 @Service
 public class PostService {
     // adding the post repository as a dependency
     private final PostRepository PostRepository;
+    private final UserService userService;
     
-    public PostService(PostRepository postRepository) {
+    public PostService(PostRepository postRepository, UserService userService) {
         this.PostRepository = postRepository;
+        this.userService = userService;
     }
     // returns all the posts
     public List<Post> allPosts() {
@@ -42,5 +44,24 @@ public class PostService {
 	public void deletePost(Long id) {
 		System.out.println(id + " post deleted");
 		PostRepository.deleteById(id);
-	}
+    }
+    
+    //Like Service for Post
+    public void addLike(Long post_id, Long user_id){
+        Post post = findOneByID(post_id);
+        User user = userService.findUserById(user_id);
+
+        if(!post.getLikers().contains(user)) {
+            post.getLikers().add(user);
+            this.PostRepository.save(post);
+        }
+    }
+
+    public void unLike(Long post_id, Long user_id) {
+        Post post = findOneByID(post_id);
+        User user = userService.findUserById(user_id);
+
+        post.getLikers().remove(user);
+        this.PostRepository.save(post);
+    }
 }

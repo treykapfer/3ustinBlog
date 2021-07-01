@@ -48,6 +48,15 @@ public class Post {
     @JoinColumn(name="user_id")
     private User user;
 
+    //To create the relationship between User and Liking a Post
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(
+		name = "post_likers",
+		joinColumns = @JoinColumn(name = "post_id"),
+		inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private List<User> likers;
+
     @OneToMany(mappedBy="post", fetch = FetchType.LAZY)
     private List<Comment> comments;
 
@@ -122,6 +131,14 @@ public class Post {
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public List<User> getLikers(){
+        return this.likers;
+    }
+
+    public void setLikers(List<User> likers){
+        this.likers = likers;
     }
 
     //add extra

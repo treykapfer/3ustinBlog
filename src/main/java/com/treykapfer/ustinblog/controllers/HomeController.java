@@ -96,12 +96,29 @@ public class HomeController {
 	}
 
 	@GetMapping("/post/{id}")
-	public String post(@PathVariable("id") Long id, @ModelAttribute("comment") Comment comment, Model model){
+	public String post(@PathVariable("id") Long id, @ModelAttribute("comment") Comment comment, Model model, HttpSession session){
 		Post post = postService.findOneByID(id);
 		List<Comment> comments = commentService.allComments();
+		User user = (User) session.getAttribute("sesUser");
+		User userInDB = this.userServ.findUserById(user.getId());
+		model.addAttribute("userInDB", userInDB);
 		model.addAttribute("post",post);
 		model.addAttribute("comments", comments);
 		return "post.jsp";
+	}
+
+	@PostMapping("post/{pID}/like")
+	public String likePost(@PathVariable("pID") Long pID, HttpSession session) {
+		User user = (User) session.getAttribute("sesUser");
+		this.postService.addLike(pID, user.getId());
+		return "redirect:/post/" + pID;
+	}
+
+	@PostMapping("post/{pID}/unLike")
+	public String unLikePost(@PathVariable("pID") Long pID, HttpSession session) {
+		User user = (User) session.getAttribute("sesUser");
+		this.postService.unLike(pID, user.getId());
+		return "redirect:/post/" + pID;
 	}
 
 	@RequestMapping(value="/post/{id}/newComment", method=RequestMethod.POST)
