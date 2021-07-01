@@ -9,6 +9,7 @@
     --dangerDark: rgb(73, 0, 12);
     --dangerLight: rgb(255, 155, 172);
     --highlight: rgba(255, 255, 255, 0.25);
+    --textHighlight: white;
     /* sizes */
     --tinyEdge: 5px;
     --roundEdge: 10px;
@@ -97,10 +98,10 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: var(--tinyEdge);
     }
 
-/*italic and white*/
+/*italic and var(--textHighlight)*/
     .high_font {
         font-style:italic;
-        color: white;
+        color: var(--textHighlight);
     }
 
 /*CONTAINER*/
@@ -139,7 +140,7 @@ header {
         background-repeat: no-repeat;
         background-position: center;
 
-        color: white;
+        color: var(--textHighlight);
     }
 
 /*MAIN COMPONENTS*/
@@ -160,7 +161,7 @@ input {
 
 .btn {
     align-self: center;
-    color: white;
+    color: var(--textHighlight);
     border: 2px solid black;
     width: 144px;
     height: 44px;

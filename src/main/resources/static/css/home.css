@@ -5,9 +5,11 @@
     --defaultColor: black;
     --tertiaryColor: gold;
     --secondaryColor: rgb(45, 25, 0);
+    --impactLight: rgba(0, 225, 255, 0.10);
     --dangerDark: rgb(73, 0, 12);
     --dangerLight: rgb(255, 155, 172);
     --highlight: rgba(255, 255, 255, 0.25);
+    --textHighlight: white;
     /* sizes */
     --tinyEdge: 5px;
     --roundEdge: 10px;
