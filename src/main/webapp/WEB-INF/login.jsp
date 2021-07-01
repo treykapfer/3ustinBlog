@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
+    <script type="text/javascript" src="js/script.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Audiowide&family=Bebas+Neue&family=Bowlby+One+SC&family=Bungee&family=Dela+Gothic+One&family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -73,7 +74,7 @@
 		</main>
 		<footer>
             <c:forEach items="${posts}" var="post">
-                <div class="blog_card">
+                <div class="blog_card" onclick = "javaAlert()">
                     <img src="${post.imageURL}">
                     <h4>${post.title}</h4>
                     <p>${post.content}</p>
