@@ -38,10 +38,7 @@
 					</a>
 				</c:forEach>
 			</div>
-		</main>	
-		<footer>
-			<small>${userID}</small>
-		</footer>
+		</main>
 	</div>
 </body>
 </html>

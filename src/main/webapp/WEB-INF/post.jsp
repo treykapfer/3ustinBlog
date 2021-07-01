@@ -27,14 +27,17 @@
 		</header>
 		<main>
 			<div class="post_container">
-				<img src="${post.imageURL}">
-				<h1>${post.title}</h1>
-				<p>${post.content}</p>
+				<div class="post_img">
+					<img src="${post.imageURL}">
+				</div>
+				<div class="post_content">
+					<h1>${post.title}</h1>
+					<p>${post.content}</p>
+				</div>
 			</div>
 			<div class="comment_container">
 				<h3>Comments</h3>
 				<c:forEach items="${comments}" var="comment">
-					<%-- TO DO - NEED TO DISPLAY THE USER WHO CREATED THE COMMENT --%>
 					<p>${comment.user.username}</p>
 					<p>${comment.content}</p>
 				</c:forEach>
