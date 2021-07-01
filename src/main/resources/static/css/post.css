@@ -38,24 +38,38 @@ main {
     flex-direction: column;
 }
 
+/*POST CSS*/
 .post_wrap {
     border-bottom: 2px dotted var(--dangerDark);
     align-items: center;
 }
 
-.post_wrap img {
-    width: 276px;
-}
+    .post_wrap img {
+        width: 276px;
+    }
 
-.post_img {
-    background-color: black;
-    width: 276px;
-    height: 276px;
-}
+    .post_img {
+        background-color: black;
+        width: 276px;
+        height: 276px;
+    }
 
-.post_content {
+    .post_content {
+        color: var(--tertiaryColor);
+    }
+        .post_content p {
+            color: white;
+        }
+
+/*COMMENTS*/
+.comment_container {
     color: var(--tertiaryColor);
 }
-    .post_content p {
-        color: white;
+
+    .comment_container h2 {
+        text-indent: 1rem;
+    }
+
+    .comment_card {
+        background-color: var(--highlight);
     }

@@ -83,13 +83,24 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 /*global padding*/
-    header, main, footer, .post_row, .blog_card {
+    header, main, footer, .post_row, .blog_card, .comment_card, #comment_form {
         padding: var(--globalPad);
+    }
+
+/*global margin*/
+    .comment_card {
+        margin: var(--globalMar);
     }
 
 /*tiny edge*/
     .post_img, .blog_card, .blog_card img, .post_content, .post_img img {
         border-radius: var(--tinyEdge);
+    }
+
+/*italic and white*/
+    .high_font {
+        font-style:italic;
+        color: white;
     }
 
 /*CONTAINER*/

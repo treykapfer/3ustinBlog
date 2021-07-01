@@ -32,23 +32,24 @@
 				</div>
 				<div class="post_content">
 					<h1>${post.title}</h1>
-					<h6>By ${post.user.username}</h6>
+					<h6>Posted by ${post.user.username} at ${post.createdAt}</h6>
 					<p>${post.content}</p>
 				</div>
 			</div>
 			<div class="comment_container">
-				<h3>Comments</h3>
-				<c:forEach items="${comments}" var="comment">
+				<h2>Comments</h2>
+				<c:forEach items="${post.comments}" var="comment">
 					<div class="comment_card">
-						<p>${comment.user.username}</p>
-						<p>${comment.content}</p>
+						<p>${comment.user.username} says:</p>
+						<p class="high_font">${comment.content}</p>
+						<small>Posted at ${comment.createdAt}</small>
 					</div>
 				</c:forEach>
-				<form:form method="POST" action="/post/${post.id}/newComment" modelAttribute="comment">
+				<form:form method="POST" action="/post/${post.id}/newComment" modelAttribute="comment" id="comment_form">
 					<div class="form">
 						<form:label path="content">Comment:</form:label>
 						<form:textarea type="text" path="content" rows="4" cols="50"/>
-						<input class="btn" type="submit" value="Submit"/>
+						<input class="btn" type="submit" value="Comment"/>
 					</div>
 				</form:form>
 			</div>
