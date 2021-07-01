@@ -13,7 +13,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Audiowide&family=Bebas+Neue&family=Bowlby+One+SC&family=Bungee&family=Dela+Gothic+One&family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
-	<title>WoW:Blog - ${post.title}</title>
+	<title>WoW:Blog — ${post.title}</title>
 </head>
 <body>
 	<div class="container">
@@ -29,7 +29,7 @@
 		<main>
 			<div class="post_wrap">
 				<div class="post_img">
-					<img src="${post.imageURL}">
+					<img src="${post.imageURL}" alt="Image Failed to Load">
 				</div>
 				<div class="post_content">
 					<h1>${post.title}</h1>
@@ -43,7 +43,6 @@
 								<button type="submit" class="btnblue">UnLike</button>
 								</form>
 							</c:when>
-
 							<c:otherwise>
 								<form action = "/post/${post.id}/like" method="post">
 								<button type="submit" class="btnblue">Like</button>
