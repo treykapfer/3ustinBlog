@@ -37,8 +37,8 @@
 						<small>Full Stack Engineer — Front End Lead</small>
 						<p>TJ is a recent Coding Dojo graduate (as of 7/2/2021), and aspires to be a front end engineer, hoping to one day get his foot in the door of the gaming industry. He enjoys several hobbies including magic the gathering, DnD, and PC/PS4 gaming.</p>
 						<nav>
-							<a href="https://www.linkedin.com/in/trey-kapfer-252ab5103/">LinkedIn</a>
-							<a href="https://github.com/treykapfer">GitHub</a>
+							<a href="https://www.linkedin.com/in/trey-kapfer-252ab5103/" target="_blank">LinkedIn</a>
+							<a href="https://github.com/treykapfer" target="_blank">GitHub</a>
 						</nav>
 					</div>
 				</div>
@@ -50,6 +50,8 @@
 						<small>Full Stack Engineer — Back End Lead</small>
 						<p></p>
 						<nav>
+							<a href="" target="_blank">LinkedIn</a>
+							<a href="" target="_blank">GitHub</a>
 						</nav>
 					</div>
 				</div>
