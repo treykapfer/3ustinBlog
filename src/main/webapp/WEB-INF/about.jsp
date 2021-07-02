@@ -45,14 +45,15 @@
 				</div>
 				<div class="post_row">
 					<div class="post_img">
+						<img src="../img/ad_d.jpg" alt="Image Failed to Load">
 					</div>
 					<div class="post_content">
 						<h1>Austin Dupras</h1>
 						<small>Full Stack Engineer — Back End Lead</small>
 						<p></p>
 						<nav>
-							<a href="" target="_blank">LinkedIn</a>
-							<a href="" target="_blank">GitHub</a>
+							<a href="https://www.linkedin.com/in/austin-dupras-50104a6b/" target="_blank">LinkedIn</a>
+							<a href="https://github.com/3Ustin" target="_blank">GitHub</a>
 						</nav>
 					</div>
 				</div>
