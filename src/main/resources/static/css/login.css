@@ -89,11 +89,12 @@ main {
 @media only screen and (max-width: 720px) {
         .right_container {
             margin: var(--globalMar);
+            justify-content: flex-start;
         }
 
         .left_container {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             margin: var(--globalMar);
         }
     }
