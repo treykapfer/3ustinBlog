@@ -122,8 +122,9 @@ header {
 
 /*MAIN COMPONENTS*/
 main {
-    background-image: url(../img/shadowlands_large_edit.png);
-    background-size: cover;
+    background-image: url(../img/shadowlands_large_flip.png);
+    background-position-x: center;
+    background-repeat: repeat-y;
     background-color: var(--defaultColor);
 }
 
