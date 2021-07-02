@@ -40,12 +40,8 @@ main {
     flex: 1;
     margin-left: var(--globalMar);
     margin-right: 3rem;
-    background: linear-gradient(to left,black,rgba(255, 255, 255, 0));
-    /* background-image: url(../img/line_blur.png);
-    background-size:cover; */
-    
-    border: 2px solid black;
-    border-left: none;
+    background:rgba(0, 0, 0, 0.5);
+    padding: 1.2rem;
 }
 
 /*FOOTER*/
@@ -88,3 +84,10 @@ main {
         .blog_card img:hover {
             opacity: 33%;
         }
+
+/*PHONE BREAK 720*/
+@media only screen and (max-width: 720px) {
+        .right_container {
+            margin: var(--globalMar);
+        }
+    }
