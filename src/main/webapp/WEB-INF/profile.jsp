@@ -31,7 +31,7 @@
 		</header>
 		<main>
 			<div class="user_container">
-				<h1>${profUser.username} Activity</h1>
+				<h1>${profUser.username}'s Activity</h1>
 				<div class="post_container">
 					<h2>Posts</h2>
 					<c:forEach items="${profUser.posts}" var="post">
