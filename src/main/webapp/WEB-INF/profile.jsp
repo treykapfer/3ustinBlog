@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/home.css">
 	<link rel="stylesheet" type="text/css" href="../css/post.css">
 	<link rel="stylesheet" type="text/css" href="../css/profile.css">
+	<link rel="icon" type="image/png" href="../img/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Audiowide&family=Bebas+Neue&family=Bowlby+One+SC&family=Bungee&family=Dela+Gothic+One&family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
