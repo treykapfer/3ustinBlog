@@ -45,7 +45,7 @@
 				</div>
 				<div class="post_row">
 					<div class="post_img">
-						<img src="../img/ad_d.jpg" alt="Image Failed to Load">
+						<img src="../img/ad-d.jpg" alt="Image Failed to Load">
 					</div>
 					<div class="post_content">
 						<h1>Austin Dupras</h1>
