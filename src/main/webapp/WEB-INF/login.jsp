@@ -27,7 +27,7 @@
         <main>
             <div class="left_container">
                 <!-- here is a preview of the blog -->
-				<img src="/img/Wow_blog2.png" id="blog_logo_big">
+				<img src="/img/Wow_blog4.png" id="blog_logo_big">
             </div>
             <div class="right_container">
                 <form method="POST" action="/login">
