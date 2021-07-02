@@ -50,7 +50,7 @@
 					<div class="post_content">
 						<h1>Austin Dupras</h1>
 						<small>Full Stack Engineer — Back End Lead</small>
-						<p></p>
+						<p>Austin started his coding career when he was ten. He built video games for fun using C#, Java, and C++. Now as a graduate of Coding Dojo in July of 2021 he hopes to code more. Though this time his coding interests are towards corporate website design. </p>
 						<nav>
 							<a href="https://www.linkedin.com/in/austin-dupras-50104a6b/" target="_blank">LinkedIn</a>
 							<a href="https://github.com/3Ustin" target="_blank">GitHub</a>
