@@ -21,6 +21,7 @@
 			<h1>The Dev Team</h1>
 			<nav>
 				<a href="/home">Back Home</a>
+				<a href="/user/${sesUser.id}">Your Profile</a>
 				<a href="/post/new">Create Post</a>
 				<a href="/logout">Logout</a>
 			</nav>

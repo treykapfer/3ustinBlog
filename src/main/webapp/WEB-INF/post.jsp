@@ -21,8 +21,9 @@
 			<h1></h1>
 			<nav>
 				<a href="/home">Back Home</a>
-				<a href="/about">Meet the Devs</a>
+				<a href="/user/${sesUser.id}">Your Profile</a>
 				<a href="/post/new">Create Post</a>
+				<a href="/about">Meet the Devs</a>
 				<a href="/logout">Logout</a>
 			</nav>
 		</header>
@@ -33,7 +34,7 @@
 				</div>
 				<div class="post_content">
 					<h1>${post.title}</h1>
-					<h6>Posted by ${post.user.username} at ${post.createdAt}</h6>
+					<h6>Posted by <a href="/user/${post.user.id}">${post.user.username}</a> at ${post.createdAt}</h6>
 					<p>${post.content}</p>
 					<div class="likes">
 						<small>${post.likers.size()} Like(s)</small>
@@ -57,7 +58,7 @@
 				<c:forEach items="${post.comments}" var="comment">
 					<div class="comment_card">
 						<div class="comment_header">
-							<p>${comment.user.username} says:</p>
+							<p><a href="/user/${comment.user.id}">${comment.user.username}</a> says:</p>
 							<div class="likes">
 								<small>${comment.likers.size()} Like(s)</small>
 								<c:choose>

@@ -87,12 +87,18 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/about")
-    public String about() {
+    public String about(HttpSession session, Model model) {
+		User user = (User) session.getAttribute("sesUser");
+		model.addAttribute("sesUser",user);
+		//
     	return "about.jsp";
 	}
 
 	@RequestMapping("/home")
-    public String home(Model model) {
+    public String home(Model model, HttpSession session) {
+		User user = (User) session.getAttribute("sesUser");
+		model.addAttribute("sesUser",user);
+		//
 		List<Post> posts = postService.allPostsDesc();
 		model.addAttribute("posts",posts);
 		return "home.jsp";
@@ -100,6 +106,9 @@ public class HomeController {
 
 	@GetMapping("/post/{id}")
 	public String post(@PathVariable("id") Long id, @ModelAttribute("comment") Comment comment, Model model, HttpSession session){
+		User u = (User) session.getAttribute("sesUser");
+		model.addAttribute("sesUser",u);
+		//
 		Post post = postService.findOneByID(id);
 		List<Comment> comments = commentService.allComments();
 		User user = (User) session.getAttribute("sesUser");
@@ -175,5 +184,16 @@ public class HomeController {
 		postService.createPost(newPost);
 		return "redirect:/home";
 	}
+
+	//PROFILE PAGE
+	@GetMapping("/user/{id}")
+	public String profile(@PathVariable("id") Long id, Model model, HttpSession session){
+		User user = (User) session.getAttribute("sesUser");
+		model.addAttribute("sesUser",user);
+		User u = userServ.findUserById(id);
+		model.addAttribute("profUser",u);
+		return "profile.jsp";
+	}
+
 
 }

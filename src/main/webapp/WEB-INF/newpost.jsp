@@ -21,6 +21,7 @@
 			<h1>Create Post</h1>
 			<nav>
 				<a href="/home">Back Home</a>
+				<a href="/user/${sesUser.id}">Your Profile</a>
 				<a href="/about">Meet the Devs</a>
 				<a href="/logout">Logout</a>
 			</nav>

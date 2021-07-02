@@ -21,22 +21,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-a:link {
-    color: var(--tertiaryColor);
-    text-decoration: none;
-}
-
-a:active {
-    color: var(--tertiaryColor);
-    text-decoration: none;
-}
-
-a:visited {
-    color: var(--tertiaryColor);
-    text-decoration: none;
-}
-
-a:hover {
+a:link, a:active, a:visited, a:hover {
     color: var(--tertiaryColor);
     text-decoration: none;
 }
@@ -46,13 +31,13 @@ textarea, input {
     font-size: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6, nav a {
+h1, h2, h3, h4, h5, nav a {
     font-family: var(--impactFont);
 }
 
 /*COMBINED PROPS*/
 /* flex column */
-    .container, .form, .post_container, .comment_container {
+    .container, .form, .post_container, .comment_container, .user_container {
         display: flex;
         flex-direction: column;
     }

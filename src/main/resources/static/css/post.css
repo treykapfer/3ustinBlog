@@ -59,3 +59,13 @@ main {
         width: 100%;
         justify-content: space-between;
     }
+
+/*LINKS FOR THIS PAGE*/
+p a:link, h6 a:link {
+    color: white;
+}
+
+p a:hover, h6 a:hover {
+    text-decoration: underline;
+}
+    
