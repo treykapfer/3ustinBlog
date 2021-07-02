@@ -90,4 +90,10 @@ main {
         .right_container {
             margin: var(--globalMar);
         }
+
+        .left_container {
+            display: flex;
+            justify-content: flex-start;
+            margin: var(--globalMar);
+        }
     }

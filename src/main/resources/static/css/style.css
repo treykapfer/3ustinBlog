@@ -232,7 +232,7 @@ small {
         margin: .25rem;
     }
 
-/*ALL MEDIA QUERIES*/
+/*MEDIA QUERIES*/
 /*TABLET BREAK 972*/
 @media only screen and (max-width: 972px) {
     :root {
@@ -268,22 +268,9 @@ small {
         flex-direction: column;
     }
 
-    .right_container {
-        margin: var(--globalMar);
-    }
-
-    .left_container {
-        display: flex;
-        justify-content: center;
-        margin: var(--globalMar);
-    }
-
     .post_row {
         flex-direction: column;
     }
-        .post_row:nth-child(2n) {
-            flex-direction: column;
-        }
 
     .post_content {
         text-align: center;

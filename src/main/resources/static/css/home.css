@@ -35,3 +35,11 @@ font-family: 'Roboto Slab', serif;
         font-size: 230%;
         margin: .5rem auto;
     }
+
+    @media only screen and (max-width: 720px) {
+        .post_row:nth-child(2n) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+    }
