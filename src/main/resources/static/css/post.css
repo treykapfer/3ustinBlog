@@ -26,13 +26,7 @@ main {
 }
 
     .post_wrap img {
-        width: 276px;
-    }
-
-    .post_img {
-        background-color: black;
-        width: 276px;
-        height: 276px;
+        width: var(--boxHeight);
     }
 
     .post_content {
@@ -68,4 +62,3 @@ p a:link, h6 a:link {
 p a:hover, h6 a:hover {
     text-decoration: underline;
 }
-    

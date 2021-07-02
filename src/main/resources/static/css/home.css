@@ -35,10 +35,3 @@ font-family: 'Roboto Slab', serif;
         font-size: 230%;
         margin: .5rem auto;
     }
-
-/*IMAGE*/
-.post_img {
-    background-color: rgba(0, 0, 0, 0.50);
-    width: 276px;
-    height: 276px;
-}
